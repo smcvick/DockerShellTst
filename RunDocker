@@ -1,0 +1,15 @@
+#!/bin/bash
+
+export IMG_NAME="foobar"
+export TST_DATA="/Users/smcvick/Tmp/data"
+
+# debug
+echo "RunDocker, writing to: ${TST_DATA}"
+
+# start LMS Docker container
+#docker run -it -v ${TST_DATA}:/data ${IMG_NAME}
+docker run -v ${TST_DATA}:/data ${IMG_NAME}
+#docker run ${IMG_NAME}
+
+echo "RunDocker complete"
+
